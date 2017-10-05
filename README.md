@@ -1,5 +1,5 @@
 # Lorel Popup
-Simple, Elegant, Beautiful, and all of above "It's Free!!!".
+Simple, Elegant, Beautiful, and all of above "**It's Free!!!**".
 
 A simple "POPUP" written in javascript, with state of art CSS and minimal HTML.
 
@@ -14,6 +14,7 @@ How to use it. Well its as simple as making a toast.
 Just include these two files in you html code, and just call "lorel.init()" with only few parameters.
 
 example
+	```
 	lorel.init({					//this will init the POPUP(yes its name is lorel:)
 		title:"This is title",		//tittle of POPUP--- optional
 		content:"This is content",	//main contents of the POPUP. HTML is supported? YES.
@@ -23,24 +24,23 @@ example
 			{value:"about",type:"info"}
 		]
 	});
+	```
 
 brief summary:
-1. lorel.init();
-	this initiate the popup and create a new container in document. It doesn't need a target div to apply on. It further divided into three parts\
+1. **lorel.init()** -this initiate the popup and create a new container in document. It doesn't need a target div to apply on. It further divided into three parts.
 	1. title
 	2. content
 	3. actions
-2. tittle - this contains the tittle of the popup, is optional. It draws a tittle bar containing a title text with an eye catching close button.
+2. **tittle** - this contains the tittle of the popup, is optional. It draws a tittle bar containing a title text with an eye catching close button.
 	Note: If you skip to give to title then the popup will not show the close button.
-3. content - this is the main container area where you can put the text or content of the popup you want to display. It accepts HTML tags too. (My kindda popup).
+3. **content** - this is the main container area where you can put the text or content of the popup you want to display. It accepts HTML tags too. (My kindda popup).
 
-4. actions- may be most important part of popup. this defines the actions this popup can take. It also draws a sneaky bottom bar.
+4. **actions**- may be most important part of popup. this defines the actions this popup can take. It also draws a sneaky bottom bar.
 
-	Basically, an array of button objects with three values:
-		1. value: the text to be displyed in button
-		2. type: type of the button for view purpose(optional)
-			currently available: "success", "cancel", "info"		// do experimenting yourself
-		3. onclick: yes as the name suggest a fucntion that it will execute on click.
+Basically, an array of button objects with three values
+	1. value: the text to be displyed in button
+	2. type: type of the button for view purpose(optional) currently available: "success", "cancel", "info"		// do experimenting yourself
+	3. onclick: yes as the name suggest a fucntion that it will execute on click.
 		
 		
 		
