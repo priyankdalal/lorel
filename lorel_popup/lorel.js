@@ -54,7 +54,7 @@
 				var btns="<div class='actions'>";
 				if(a.length>0){
 					for(var i in a){
-						var v="",t="";
+						var v="",t="class='btn-success' ";
 						if(a[i].hasOwnProperty("value"))
 							v=a[i].value;
 						if(a[i].hasOwnProperty("type"))
