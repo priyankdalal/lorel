@@ -13,7 +13,8 @@ How to use it. Well its as simple as making a toast.
 
 Just include these two files in you html code, and just call "lorel.init()" with only few parameters.
 
-example
+example:
+
    lorel.init({					//this will init the POPUP(yes its name is lorel:)
         title:"This is title",		//tittle of POPUP--- optional
 		content:"This is content",	//main contents of the POPUP. HTML is supported? YES.
