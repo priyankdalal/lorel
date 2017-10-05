@@ -1,0 +1,28 @@
+# Lorel Popup
+Simple, Elegant, Beautiful, and all of above "It's Free!!!".
+
+A simple "POPUP" written in javascript, with state of art CSS and minimal HTML.
+
+Design is simple, yet like an eye catching candy with a close button inspired from linux Adwaita Theme.
+
+Very light weight, no jQuery required, with only two files ( yeah! one CSS stylesheet and another javascript code) is light like a feather weights only 6kB on disk space.
+
+Written to be used as POPUP, also incorporates basic functionality of window objects of Alert, Confirm and Prompt, using them is as simple as originals of Windows.
+
+How to use it. Well its as simple as making a toast.
+
+Just include these two files in you html code, and just call "lorel.init()" with only few parameters.
+
+	example
+				lorel.init({					//this will init the POPUP(yes its name is lorel:)
+					title:"This is title",		//tittle of POPUP--- optional
+					content:"This is content",	//main contents of the POPUP. HTML is supported? YES.
+					actions:[							//for bottom action buttons
+						{value:"Ok",type:"success"},	
+						{value:"cancel",type:"cancel"},
+						{value:"about",type:"info"}
+					]
+				});
+
+
+
