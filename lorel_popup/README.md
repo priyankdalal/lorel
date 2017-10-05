@@ -14,17 +14,17 @@ How to use it. Well its as simple as making a toast.
 Just include these two files in you html code, and just call "lorel.init()" with only few parameters.
 
 example:
-
-   lorel.init({					//this will init the POPUP(yes its name is lorel:)
-        title:"This is title",		//tittle of POPUP--- optional
-		content:"This is content",	//main contents of the POPUP. HTML is supported? YES.
-		actions:[							//for bottom action buttons
-			{value:"Ok",type:"success",onclick:"dothis()"},	
-			{value:"cancel",type:"cancel"},
+```
+        lorel.init({
+            title:"This is title",        //tittle of POPUP--- optional
+            content:"This is content",        //main contents of the POPUP. HTML is supported? YES.
+            actions:[        //for bottom action buttons
+                {value:"Ok",type:"success",onclick:"dothis()"},
+                {value:"cancel",type:"cancel"},
 			{value:"about",type:"info"}
-		]
-    });
-
+			]
+        });
+```
 brief summary:
 1. **lorel.init()** -this initiate the popup and create a new container in document. It doesn't need a target div to apply on. It further divided into three parts.
 	1. title
