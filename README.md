@@ -21,8 +21,8 @@ example:
             actions:[        //for bottom action buttons
                 {value:"Ok",type:"success",onclick:"dothis()"},
                 {value:"cancel",type:"cancel"},
-			{value:"about",type:"info"}
-			]
+		{value:"about",type:"info"}
+		]
         });
 ```
 brief summary:
@@ -37,17 +37,17 @@ brief summary:
 4. **actions**- may be most important part of popup. this defines the actions this popup can take. It also draws a sneaky bottom bar.
 
 Basically, an array of button objects with three values
-1. value: the text to be displyed in button
-2. type: type of the button for view purpose(optional) currently available: "success", "cancel", "info"		// do experimenting yourself
-3. onclick: yes as the name suggest a fucntion that it will execute on click.
+1. **value**: the text to be displyed in button
+2. **type**: type of the button for view purpose(optional) currently available: "success", "cancel", "info"		// do experimenting yourself
+3. **onclick**: yes as the name suggest a fucntion that it will execute on click.
 		
 		
 		
 So with all this core fucntionality there are three built-in types
 
-	lorel.alert();
-	lorel.confirm();
-	lorel.prompt();
+	lorel.alert(str);
+	lorel.confirm(str);
+	lorel.prompt(str);
 
 
 
