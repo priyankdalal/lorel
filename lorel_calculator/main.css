@@ -2,3 +2,87 @@
 @@@@
 Stylesheet for lorel calculator
 */
+/************globals***********/
+.lorel-row{
+  display: flex;
+  flex-direction: row;
+}
+.lorel-col{
+  display: flex;
+  flex-direction: column;
+}
+.lorel-widget button{
+  min-width: 40px;
+  min-height: 40px;
+  border:none;
+  transition: all 0.4s;
+  background: transparent;
+  color:#d7d7d7;
+}
+.lorel-widget button:hover{
+  background: white;
+  color:#616161;
+}
+.border-round{
+  border-radius: 4px;
+}
+.cell-1{
+  width: 100%;
+}
+.cell-2{
+  width: 50%;
+}
+.cell-3{
+  width: 33.33%;
+}
+.cell-4{
+  width: 25%;
+}
+.cell-5{
+  width: 20%;
+}
+/************specific*********/
+.lorel-widget{
+  position: absolute;
+  top:90px;
+  left:100px;
+  box-shadow: 1px 1px 6px -3px black;
+  background:#2e313f;
+  color:whitesmoke;
+}
+.lwidget-titlebar{
+  height: 25px;
+  min-height: 25px;
+  background:#2e313f;
+  color:white;
+  line-height: 25px;
+  vertical-align: middle;
+  text-indent: 10px;
+  border-radius: 4px 4px 0 0;
+  cursor:-webkit-grabbing;
+}
+.lwidget-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lcal-display{
+  height: 80px;
+  background:white;
+  width:92%;
+  border-radius: 2px;
+  color:#444;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.lcal-display-line{
+  padding-right:4px;
+}
+.lcal-display-line h3{
+  margin:1px;
+}
+.lwidget-statusbar{
+  text-indent: 12px;
+}
