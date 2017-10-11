@@ -62,7 +62,7 @@ Stylesheet for lorel calculator
 }
 /************specific*********/
 .lorel-widget{
-  position: absolute;
+  position: fixed;
   top:90px;
   left:100px;
   box-shadow: 1px 1px 44px -13px black;
