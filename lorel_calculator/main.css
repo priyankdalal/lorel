@@ -28,7 +28,21 @@ Stylesheet for lorel calculator
   border-radius: 4px;
 }
 .light-gray{
-  background: #5f5f5f;
+  background: #535151;
+}
+.dark-navy{
+  background: #17152c;
+}
+.h-ribbon{
+  position: relative;
+  z-index: 8;
+  box-shadow: 0 0 4px -1px black;
+}
+.v-shadow{
+  box-shadow: -2px 1px 4px -1px black;
+}
+.current-line{
+
 }
 /************containers*********/
 .cell-1{
@@ -54,6 +68,7 @@ Stylesheet for lorel calculator
   box-shadow: 1px 1px 44px -13px black;
   background:#2d303f;
   color:whitesmoke;
+  user-select: none;
 }
 .lwidget-titlebar{
   height: 25px;
@@ -72,21 +87,49 @@ Stylesheet for lorel calculator
   align-items: center;
 }
 .lcal-display{
+  position: relative;
   height: 80px;
-  background:#9dd5b8;
-  width:100%;
-  color:#444;
+  background: #9dd5b8;
+  width: 100%;
+  color: #444;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
+  box-shadow: 0px 2px 5px -1px darkslategrey;
+  /* border-left: 20px solid olivedrab; */
+  box-sizing: border-box;
+  z-index: 9;
 }
 .lcal-display-line{
   padding-right:4px;
+  user-select: text;
 }
 .lcal-display-line h3{
   margin:1px;
 }
 .lwidget-statusbar{
   text-indent: 12px;
+}
+.lcal-display .display-header{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: row;
+  font-family: monospace;
+  font-size: 9px;
+  color:#818181;
+  background: #9dd5b8;
+  text-indent: 2px;
+  line-height: 14px;
+  cursor:-webkit-grabbing;
+}
+.lcal-display .display-header span{
+  margin-left:2px;
+}
+button.cal-cl{
+  background-color:tomato;
 }
