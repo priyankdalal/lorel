@@ -26,9 +26,8 @@
 					if(l.content.length>0)
 					cHtml=this.buildContent(l.content,"flex-start");
 				}
-				
 				aHtml=this.buildActions(l.actions);
-				return this.buildStructure(tHtml, cHtml, aHtml);	
+				return this.buildStructure(tHtml, cHtml, aHtml);
 			},
 			buildStructure:function(t,c,a){
 				var popup='<div class="lorel" id="lorel_popup_'+ id+ '">'
@@ -58,10 +57,10 @@
 						if(a[i].hasOwnProperty("value"))
 							v=a[i].value;
 						if(a[i].hasOwnProperty("type"))
-							t+="class='btn-"+ a[i].type+ "' ";
+							t="class='btn-"+ a[i].type+ "' ";
 						if(a[i].hasOwnProperty("onclick"))
 							t+="onclick='"+ a[i].onclick+ "'";
-				
+
 						btns+="<button value='"+ v+ "' "+ t+ ">"+ v+ "</button>";
 					}
 				}else{
