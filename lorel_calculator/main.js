@@ -7,6 +7,14 @@ function drop_handler(ev) {
  ev.srcElement.style.top=ev.clientY+ "px";
  ev.srcElement.style.left=(ev.clientX-(parseInt(ev.srcElement.offsetWidth/2)))+ "px";
 }
+function keypad_close(){
+  var ribbon=document.getElementsByClassName("lorel-row")[0];
+  var keypad=document.getElementsByClassName("lorel-row")[1];
+  ribbon.classList.add("mem-ribbon-hide");
+  ribbon.classList.remove("mem-ribbon-show");
+  keypad.classList.add("basic-keypad-hide");
+  keypad.classList.remove("basic-keypad-show");
+}
 (function(w){
   function LorelCalculator(){
     var currentResult=0;
