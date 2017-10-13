@@ -51,7 +51,7 @@ function keypad_toggle(){
     },40);
   };
   LorelCalculator.prototype.slideDown=function(el,eta){
-
+    //-TODO
   };
   w['lorel_calculator']= new LorelCalculator();
 })(window);
