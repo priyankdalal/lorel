@@ -26,14 +26,14 @@
           </div>
         </div>
         <div class="lcal-buttons">
-          <div class="lorel-row light-gray h-ribbon mem-ribbon-show">
+          <div class="lorel-row light-gray h-ribbon mem-ribbon-show" id="lorel-mem-ribbon">
               <button>MC</button>
               <button>MR</button>
               <button>M+</button>
               <button>M-</button>
               <button class="cal-cl">CE</button>
           </div>
-          <div class="lorel-row basic-keypad basic-keypad-show">
+          <div class="lorel-row basic-keypad basic-keypad-show" id="lorel-basic-keypad">
               <div class="lorel-col cell-4">
                 <button>7</button>
                 <button>4</button>
@@ -59,8 +59,8 @@
                 <button>+</button>
               </div>
           </div>
-          <div class="lorel-row lorel-drawer" data-toggle="1">
-            <div onclick="keypad_toggle();" class="rotate-minus">&#8250;</div>
+          <div class="lorel-row lorel-drawer" id="lorel-drawer">
+            <div onclick="lorel_calculator.toggle_keypad();" class="rotate-minus">&#8250;</div>
           </div>
         </div>
       </div>
