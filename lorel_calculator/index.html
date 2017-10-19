@@ -4,17 +4,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Stylesheet" href="main.css" type="text/css">
     <script src="main.js"></script>
+      <script>
+        function initPage(){
+            lorel_calculator.bindButtons(lorel_calculator.handleButtons);
+        }
+      </script>
   </head>
-  <body>
+  <body onload="initPage()">
     lorel calculator demo
     <div class="lorel-widget" draggable="true" ondragend="drop_handler(event);">
       <div class="lwidget-titlebar" style="display:none;">
         Lorel calculator
       </div>
       <div class="lwidget-container">
-        <div class="lcal-display">
+        <div class="lcal-display" id="lcal-display">
           <div class="display-header">
-            <span style="color:black;">deg</span>
+            <span class="highlight-dark">deg</span>
             <span>rad</span>
             <span>grad</span>
           </div>
