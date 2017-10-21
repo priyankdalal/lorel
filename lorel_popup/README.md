@@ -45,20 +45,10 @@ Basically, an array of button objects with three values
 		
 So with all this core fucntionality there are three built-in types
 
-	lorel.alert();
-	lorel.confirm();
-	lorel.prompt();
+	lorel.alert(str);
+	lorel.confirm(str,callback);
+	lorel.prompt(str,callback);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+1. __*lorel.alert*__ - A basic replacement of window.alert. Where window.alert causes a pause in javascript, but this not. Just put you string in the statement and its done.
+2. __*lorel.confirm*__ - replacement of widow.confirm. The respose is returned in **callback** function in form of (true|false).
+3. __*lorel.prompt*__ - replacement of window.promt. the respose is returned in **callback** function in form of string.
