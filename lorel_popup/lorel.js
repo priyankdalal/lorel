@@ -76,12 +76,27 @@
 			alert:function(m){
 				this.init({content:{msg:m,align:"center"},actions:[{value:"Ok",onclick:"lorel.close()"}]});
 			},
-			confirm:function(m,callback){
-				this.init({content:{msg:m,align:"center"},actions:[{value:"Yes",onclick:"lorel.response(this.value,"+ callback+ ")"},{value:"No",type:"cancel",onclick:"lorel.response(this.value,"+ callback+ ")"}]});
+			confirm:function(m,callback=null){
+			    if(!callback)
+			       	this.init({content:{msg:m,align:"center"},actions:[{value:"Yes",onclick:"lorel.close()"},{value:"No",type:"cancel",onclick:"lorel.close()"}]});
+				else
+				    this.init({content:{msg:m,align:"center"},actions:[{value:"Yes",onclick:"lorel.response(this.value,"+ callback+ ")"},{value:"No",type:"cancel",onclick:"lorel.response(this.value,"+ callback+ ")"}]});
 			},
 			prompt:function(m,callback){
-				var pmsg="<input class='lorel-input' type='text' id='lorel_prompt_text' autofocus/>"
+				var pmsg="<input class='lorel-input' type='text' id='lorel_value' autofocus/>";
 				this.init({title:m,content:{msg:pmsg,align:"center"},actions:[{value:"Submit",onclick:"lorel.response(this.value,"+ callback+ ")"}]});
+			},
+			select:function(m, data,callback=null){
+                var selectHtml = '';
+                for(var i in data){
+                    selectHtml += "<option value='"+ data[i].key+ "'>"+ data[i].value+ "</option>";
+                }
+                selectHtml = "<select class='lorel_input' id='lorel_value'>"+ selectHtml+ "</select>";
+                this.init({
+                    title:m,
+                    content:{msg:selectHtml,align:"center"},
+                    actions:[{value:"Submit",onclick:"lorel.response(this.value,"+ callback+ ")"},{value:"No",type:"cancel",onclick:"lorel.close()"}]
+                });
 			},
 			response:function(i,callback){
 				if(!callback)
@@ -89,9 +104,8 @@
 				if(i.toLowerCase()=="yes")
 					callback(true);
 				else if(i.toLowerCase()=="submit"){
-					callback(document.getElementById("lorel_prompt_text").value);
-				}
-				else
+					callback(document.getElementById("lorel_value").value);
+				}else
 					callback(false);
 				this.close();
 			}
