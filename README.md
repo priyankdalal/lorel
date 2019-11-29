@@ -1,5 +1,5 @@
 # Lorel Popup
-Simple, Elegant, Beautiful, and all of above "**It's Free!!!**".
+Simple, Elegant, Beautiful, and "**Open Source**".
 
 A simple "POPUP" written in javascript, with state of art CSS and minimal HTML.
 
@@ -48,6 +48,13 @@ So with all this core fucntionality there are three built-in types
 	lorel.alert(str);
 	lorel.confirm(str);
 	lorel.prompt(str);
+
+# Lorel Calculator ( In Development )
+
+Simple Calculator with elegant design and perks.
+Just do calculations, minimize it or place anywhere on the page. It's fun to play with it.
+It has smooth animations and transitions, yet powerful.
+
 
 
 
